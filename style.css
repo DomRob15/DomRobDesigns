@@ -1,6 +1,283 @@
-/*-------Base Layout Styles--------*/
+/*-------Header Syles--------*/
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.topnav {
+    font-size: 1em;
+    font-family: arial, helvetica, sans-serif;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+
+.logo {
+
+}
+
+ul {
+    list-style-type: none;
+    background-color: white;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    color: #b7b7b7;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #ef6161;
+}
+
+.searchBar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+
+/* ------Slide Show------ */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides:first-child {
+    display:block;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+  
+
+/*-------Body Content Styles--------*/
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 0;
+    padding:0;
+    width: 100%;
+}
 
 .portfolio {
+   
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px; 
+    font-size: 20px; 
+    text-align: center;
+    color: lightblue;
+    margin: 0;
+    padding:0;
+    width: 100%;
+    max-width: 1800px;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px;
+    margin: 0 0 20px;
+    color: white;
+    background-color: lightblue;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    border: 0;
+}
+
+.about {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; 
+    text-align: center;
+    background-color:lightblue;
+    color: white;
+    margin: 0;
+    padding:0;
+    width: 100%;
+    max-width: 1800px;
+    margin-top: 50px;
+}
+
+.contact {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; 
+    text-align: center;
+    color: lightblue;
+    margin: 0;
+    padding:0;
+    width: 100%;
+    max-width: 1800px;
+}
+
+/* Portfolio Styles */
+
+.h1{
+    display:block;
+    margin-bottom: 50px;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* .services div{
+
+    width: 33%;
+} */
+
+.box {
+    margin-right: 3em;
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    text-align: center;
+}
+
+.row_1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.row_2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*------- media queries------ */
+
+@media (min-width: 992px) {
+    .about {
+        background-color: #ef6161;
+    }
+
+    .contact {
+        color: #ef6161;
+    }
+
+    .portfolio {
+        color:#ef6161
+    }
+
+    .button {
+        background-color: #ef6161;
+    }
+}
+
+@media (max-width: 999px) {
+
+    .row_1, .row_2{
+        flex-direction: column;
+    }
 }
